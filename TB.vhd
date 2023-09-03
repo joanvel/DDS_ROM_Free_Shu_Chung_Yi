@@ -30,7 +30,7 @@ Architecture RTL of TB is
 	file fcos:text;
 begin
 	--Señal de frecuencia de control
-	s_fctrl<="0010000000000000";
+	s_fctrl<="0000000000000001";
 	--Señal de reinicio
 	process
 	begin
@@ -52,7 +52,7 @@ begin
 		variable l:line;
 		variable status:file_open_status;
 	begin
-		file_open(status,fsin,"C:\Users\joane\Documents\Signals\Sinusoidales\sin14.txt",append_mode);
+		file_open(status,fsin,"C:\Users\Joan\Documents\TG\Senales\DDS_ROM_Free_Shu_Chung_Yi\sin1.txt",append_mode);
 		assert status=open_ok
 			report "No se pudo crear sin.txt"
 			severity failure;
@@ -64,7 +64,7 @@ begin
 		variable l:line;
 		variable status:file_open_status;
 	begin
-		file_open(status,fcos,"C:\Users\joane\Documents\Signals\Sinusoidales\cos14.txt",append_mode);
+		file_open(status,fcos,"C:\Users\Joan\Documents\TG\Senales\DDS_ROM_Free_Shu_Chung_Yi\cos1.txt",append_mode);
 		assert status=open_ok
 			report "No se pudo crear cos.txt"
 			severity failure;
